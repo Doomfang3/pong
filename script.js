@@ -6,6 +6,10 @@ const ctx = canvas.getContext("2d");
 const startBtn = document.querySelector("#start");
 const restartBtn = document.querySelector("#restart");
 
+const img = new Image();
+img.src =
+  "https://imgs.search.brave.com/XYJUYW5z4qPGMLMLMaHB-d-Stxg-g2HMcts4PCE5dXc/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/ZDM4OHZocDBqN3Qy/MS5qcGc_YXV0bz13/ZWJwJnM9N2Y4Njdi/NzViNzc4MmJhNWM3/ZGNkM2UzNDdjYmQx/MjViZWI3ZDQyOQ";
+
 let circleX = 150;
 let circleY = 170;
 let circleRadius = 25;
@@ -98,6 +102,7 @@ let animationFrameId;
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
   circleBounce();
   drawPaddle();
   drawScore();
