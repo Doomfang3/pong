@@ -88,8 +88,8 @@ const animate = () => {
     ballX < paddleX + paddleWidth
   ) {
     score += 1
-    ballSpeedX += 2
-    ballSpeedY = (ballSpeedY + 2) * -1
+    ballSpeedX *= 1.2
+    ballSpeedY *= -1.2
   }
 
   // Bottom wall
